@@ -148,52 +148,6 @@ Run `npm run benchmark` (or `python3 benchmarks/run_benchmark.py`) in this repos
 >
 > Early CDNs only held static files like images or stylesheets. That worked fine for read-heavy sites, but it fell apart once teams tried to sync live state across continents. Because edge workers now run small compute isolates right beside local cache storage, two people in different time zones can edit the same document at once without waiting on a distant origin server to lock rows (though keeping those distributed caches consistent during a network split is still a headache).
 
-## Repository Layout
-
-```text
-humanizer/
-├── SKILL.md                          # Core Agent Skill (auto-discovered by npx skills)
-├── README.md                         # Architecture, npx guide, and benchmark documentation
-├── LICENSE                           # MIT License (Copyright (c) 2026 adishram)
-├── package.json                      # NPM / NPX package configuration (@adishram/humanizer)
-├── bin/
-│   └── humanizer.mjs                 # Zero-dependency Node.js CLI for npx install & auditing
-├── scripts/
-│   └── audit_text.py                 # Python micro-stylometric & Wikipedia AI-tell auditor
-├── benchmarks/
-│   ├── run_benchmark.py              # Reproducible benchmark script
-│   └── results.json                  # Saved benchmark metrics output
-├── references/
-│   └── ai-vs-human-markers.md        # Deep-dive reference on stylometry & Wikipedia AI tells
-├── chatgpt/
-│   └── custom-instructions.md        # Ready-to-paste ChatGPT Custom Instructions & Custom GPT guide
-└── .claude-plugin/
-    └── plugin.json                   # Claude Code plugin marketplace manifest
-```
-
-## Publishing to GitHub (`adishram/humanizer`)
-
-Unzip `adishram-humanizer-repo.zip` and run the following commands from your terminal:
-
-```bash
-cd humanizer-repo
-git init -b main
-git add .
-git commit -m "feat: initial release of @adishram/humanizer v2.0 skill and stylometric auditor"
-
-# Create the public repository on GitHub (via GitHub CLI) or push to an existing repo:
-gh repo create adishram/humanizer --public --source=. --remote=origin --push
-# Or with standard git remote:
-# git remote add origin https://github.com/adishram/humanizer.git
-# git push -u origin main
-```
-
-Once pushed to `https://github.com/adishram/humanizer`, anyone can install your skill immediately with:
-
-```bash
-npx skills add adishram/humanizer
-```
-
 ## References & Research Credits
 
 - **WikiProject AI Cleanup**: [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
