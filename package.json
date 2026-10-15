@@ -1,0 +1,52 @@
+{
+  "name": "@adishram/humanizer",
+  "version": "2.0.0",
+  "description": "Open-source AI humanizer skill and micro-stylometric auditor for Claude, ChatGPT, Codex, and Cursor based on Wikipedia's Signs of AI Writing and stylometric detection research.",
+  "license": "MIT",
+  "author": "adishram (https://github.com/adishram)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adishram/humanizer.git"
+  },
+  "homepage": "https://github.com/adishram/humanizer#readme",
+  "bugs": {
+    "url": "https://github.com/adishram/humanizer/issues"
+  },
+  "type": "module",
+  "bin": {
+    "humanizer": "./bin/humanizer.mjs"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "LICENSE",
+    "bin/",
+    "scripts/",
+    "references/",
+    "chatgpt/",
+    ".claude-plugin/"
+  ],
+  "scripts": {
+    "audit": "node ./bin/humanizer.mjs audit",
+    "install-skill": "node ./bin/humanizer.mjs install",
+    "benchmark": "python3 ./benchmarks/run_benchmark.py"
+  },
+  "keywords": [
+    "agent-skills",
+    "skills",
+    "ai-humanizer",
+    "humanizer",
+    "claude",
+    "claude-code",
+    "chatgpt",
+    "codex",
+    "cursor",
+    "stylometry",
+    "burstiness",
+    "perplexity",
+    "wikipedia-signs-of-ai-writing"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

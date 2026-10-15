@@ -1,0 +1,14 @@
+{
+  "name": "humanizer",
+  "description": "Rewrite AI-generated prose so it reads naturally and passes stylometric and editorial AI detection checks.",
+  "version": "2.0.0",
+  "author": {
+    "name": "adishram",
+    "url": "https://github.com/adishram"
+  },
+  "repository": "https://github.com/adishram/humanizer",
+  "license": "MIT",
+  "skills": [
+    "./SKILL.md"
+  ]
+}
